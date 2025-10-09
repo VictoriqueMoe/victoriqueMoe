@@ -193,5 +193,5 @@ Currently maintaining WaifuVault and working on Discord bots. Aviation enthusias
 <div align="center">
   <i>✨ VictoriqueMoe ✨</i>
   <br/>
-  <i>TypeScript, security, and solving mysteries nobody asked me to solve.</i>
+  <i>Golang, security, and solving mysteries nobody asked me to solve.</i>
 </div>
