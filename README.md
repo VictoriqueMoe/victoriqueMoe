@@ -25,7 +25,7 @@
   <tr>
     <td align="center" width="50%">
       <b>🇬🇧 Location</b><br/>
-      United Kingdom (UTC +01:00)
+      United Kingdom (UTC +00:00)
     </td>
     <td align="center" width="50%">
       <b>💼 Work</b><br/>
