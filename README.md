@@ -48,7 +48,7 @@
 
 <p align="center">
 I write TypeScript, break things in the name of security, and occasionally contribute to open source when the mood strikes.<br/>
-Currently maintaining WaifuVault and working on Discord bots. Aviation enthusiast on the side.
+Creator and maintainer of WaifuVault and working on Discord bots. Aviation enthusiast on the side.
 </p>
 
 <br/>
