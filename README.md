@@ -88,16 +88,6 @@ Repository: [decino/viewer-submissions-form](https://github.com/decino/viewer-su
 
 *(More projects are available in the pinned repositories section on the profile.)*
 
----
-
-## GitHub Overview (Text-Focused, Recruiter-Friendly)
-
-- Active contributor to personal and open-source projects  
-- Experience working across **multi-repo**, **multi-service** environments  
-- Comfortable reading, refactoring, and extending existing codebases in Java, Go, and Node  
-- Regular use of GitHub workflows, pull requests, and code review practices  
-
----
 
 ## Contact
 
