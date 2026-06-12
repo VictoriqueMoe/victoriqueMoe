@@ -77,14 +77,37 @@ This project is actively used in production and serves as a real-world backend s
 
 ---
 
-### Viewer Submissions Form – Submission Webapp for Doom Levels  
-Repository: [decino/viewer-submissions-form](https://github.com/decino/viewer-submissions-form)
+### Umineko City of Books – Social Platform for the *When They Cry* Community  
+Repository: https://github.com/VictoriqueMoe/umineko_city_of_books
 
-- **Node.js + TypeScript** web application for collecting and managing viewer submissions  
-- Built with **Express** and a TypeScript-based backend targeting Node 20+
-- Uses an SMTP-backed email pipeline for handling submission notifications and replies
-- Provides Docker-based workflows for building and running the app in production-like environments
-- Focus on validation, reliability, and a clean flow from web form to stored submission
+- Full-fledged social networking platform for fans of the *When They Cry* visual novel series (theory debates, game board, mysteries, galleries, fanfiction, chat rooms, DMs, and more)  
+- Backend in **Go (Fiber v3)** backed by **SQLite** (pure-Go, no CGO), frontend in **React 19 + TypeScript**, served as a single binary embedding the Vite bundle  
+- Real-time everything over a single in-process **WebSocket hub**: live notifications, chat, presence, reactions, and like/view counters with exponential-backoff reconnect and ETag polling fallback  
+- Background **media pipeline** with a worker pool for image-to-WebP and video-to-MP4 encoding off the request hot path  
+- **Permission-based authorization** layer, server-side sessions with httpOnly cookies, and a pluggable content-filter pipeline on all user-generated text  
+- Live at [meta.auaurora.moe](https://meta.auaurora.moe)
+
+---
+
+### Umineko Quote Finder – Full-Text Quote Search Engine  
+Repository: https://github.com/VictoriqueMoe/umineko_quote_finder
+
+- Search engine over thousands of dialogue lines across three visual novels (Umineko, Higurashi, Ciconia), with filtering by character, episode/arc/chapter, and truth type  
+- **Go (Fiber v3)** backend with a hand-written **lexer → parser → AST → transformer** pipeline for parsing the game scripts, plus a generic store for shared search/browse/random logic  
+- Custom **ONS2 format decoder** (XOR substitution cipher + zlib), data embedded at compile time via `go:embed`, and on-the-fly **Open Graph image generation** for shareable quotes  
+- **React 19 + TypeScript** frontend with inline audio playback and a voice-clip builder for composing custom dialogue sequences  
+- Containerized with **Docker** and shipped via GitHub Actions; live at [quotes.auaurora.moe](https://quotes.auaurora.moe)
+
+---
+
+### ONScripter-RU WASM – Visual Novel Engine in the Browser  
+Repository: https://github.com/VictoriqueMoe/onscripter-ru-wasm
+
+- WebAssembly fork of the **C++** ONScripter-RU visual novel engine, cross-compiled to run entirely in the browser via **Emscripten**  
+- Replaces multithreaded subsystems (media demux/decode, subtitle rendering, async dispatch) with **single-threaded synchronous** equivalents to fit the browser execution model and WASM memory limits  
+- Rewires native synchronous **file I/O to fetch assets over HTTP** on demand, and persists save data to the browser's **IndexedDB** via IDBFS  
+- Adapts the graphics and audio pipelines to **WebGL** and the **Web Audio API**, with all changes gated behind compile flags so native builds stay untouched  
+- Powers a full PS3-build *Umineko no Naku Koro ni* running in a single browser tab  
 
 *(More projects are available in the pinned repositories section on the profile.)*
 
